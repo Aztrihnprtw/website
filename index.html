@@ -1,0 +1,216 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #080808;
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 10%;
+            background: #111;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #00f7ff;
+            text-shadow: 0 0 15px #00f7ff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00f7ff;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: clamp(35px, 7vw, 65px);
+            margin-bottom: 20px;
+            animation: muncul 1.5s ease;
+        }
+
+        .hero h1 span {
+            color: #00f7ff;
+            text-shadow: 0 0 20px #00f7ff;
+        }
+
+        .hero p {
+            color: #aaa;
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 550px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            border: 2px solid #00f7ff;
+            border-radius: 30px;
+            background: transparent;
+            color: #00f7ff;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #00f7ff;
+            color: #080808;
+            box-shadow: 0 0 25px #00f7ff;
+            transform: scale(1.05);
+        }
+
+        .about {
+            padding: 60px 10%;
+            text-align: center;
+            background: #111;
+        }
+
+        .about h2 {
+            color: #00f7ff;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            color: #bbb;
+            line-height: 1.8;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #777;
+            background: #080808;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">MYWEB.</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>WELCOME TO <span>MY WEBSITE</span></h1>
+
+        <p>
+            Selamat datang di website saya!
+            Website sederhana dengan desain modern,
+            efek neon, dan animasi yang keren.
+        </p>
+
+        <a href="#about" class="btn">Jelajahi Sekarang</a>
+    </section>
+
+    <section class="about" id="about">
+        <h2>Tentang Website</h2>
+
+        <p>
+            Ini adalah website yang dibuat menggunakan HTML,
+            CSS, dan JavaScript. Kamu bisa mengubah teks,
+            warna, desain, dan fitur sesuai keinginanmu.
+        </p>
+    </section>
+
+    <section class="about" id="contact">
+        <h2>Hubungi Saya</h2>
+
+        <p id="pesan">
+            Klik tombol di bawah untuk mencoba fitur interaktif!
+        </p>
+
+        <br>
+
+        <button class="btn" onclick="tampilkanPesan()">
+            Klik Saya!
+        </button>
+    </section>
+
+    <footer>
+        &copy; 2026 My Website. Dibuat dengan ❤️
+    </footer>
+
+    <script>
+        function tampilkanPesan() {
+            document.getElementById("pesan").innerHTML =
+                "🔥 Terima kasih sudah mengunjungi website saya!";
+        }
+    </script>
+
+</body>
+</html>
+```
